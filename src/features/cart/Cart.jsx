@@ -10,6 +10,7 @@ function Cart() {
   const username = useSelector(getUsername);
   const cart = useSelector(getCart);
 
+
   if(!cart.length) return <Emptycart />
 
   return (
@@ -20,7 +21,7 @@ function Cart() {
 
       <ul className="mt-3 border-b divide-y divide-stone-200">
         {cart.map((item) => (
-          <CartItem item={item} key={item.id} />
+          <CartItem item={item} key={item.pizzaId} />
         ))}
       </ul>
 
@@ -39,3 +40,4 @@ function Cart() {
 }
 
 export default Cart;
+``
